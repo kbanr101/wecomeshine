@@ -1,194 +1,96 @@
 ---
 layout: default
-title: Giveaway
-permalink: /giveaway/
+title: We Come Shine
 ---
 
 <style>
-  body {
-    font-family: 'Segoe UI', sans-serif;
-    background: #f8f9fa;
-    color: #222;
-    line-height: 1.6;
-    margin: 0;
-  }
-
-  .hero {
-    background: url('https://images.unsplash.com/photo-1592194996308-7b43878e84a6?auto=format&fit=crop&w=1400&q=80') center center / cover no-repeat;
-    padding: 4rem 2rem;
-    text-align: center;
+  .home-hero {
+    background: url('https://images.unsplash.com/photo-1610913365113-287c37f75b9e?auto=format&fit=crop&w=1400&q=80') center center / cover no-repeat;
     color: white;
+    padding: 5rem 2rem;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
   }
 
-  .hero h1 {
+  .home-hero h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    text-shadow: 1px 1px 4px #000;
   }
 
-  .badge {
+  .home-hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .cta-btn {
     display: inline-block;
     background-color: #ffc107;
     color: #000;
-    padding: 0.25rem 0.5rem;
-    border-radius: 4px;
+    padding: 1rem 2rem;
     font-weight: bold;
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
-  }
-
-  .wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: stretch;
-    flex-wrap: wrap;
-    gap: 1rem;
-    max-width: 1200px;
-    margin: auto;
-    padding: 2rem;
-    box-sizing: border-box;
-  }
-
-  .sidebar, .main {
-    background: #fff;
-    padding: 1.5rem;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    flex-grow: 1;
-    min-width: 280px;
-    box-sizing: border-box;
-  }
-
-  .sidebar {
-    flex-basis: 240px;
-    background: #fff8e1;
-  }
-
-  .main {
-    flex-basis: 500px;
-    flex-grow: 2;
-  }
-
-  form input, form select, form button {
-    width: 100%;
-    padding: 0.75rem;
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ccc;
+    font-size: 1.1rem;
     border-radius: 6px;
-  }
-
-  form button {
-    background-color: #1e90ff;
-    color: white;
-    font-weight: bold;
-    border: none;
+    text-decoration: none;
     transition: background 0.3s;
   }
 
-  form button:hover {
-    background-color: #0066cc;
+  .cta-btn:hover {
+    background-color: #ffb300;
   }
 
-  .bonus-offer {
+  .section {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .section ul {
+    text-align: left;
+    display: inline-block;
+    margin: auto;
+  }
+
+  .testimonial {
+    font-style: italic;
+    margin-top: 1.5rem;
+    color: #555;
+  }
+
+  .badge-box {
     background: #e6f2ff;
     padding: 1rem;
     border-left: 4px solid #1e90ff;
-    margin-top: 2rem;
     border-radius: 6px;
-  }
-
-  .video-embed {
-    margin-top: 2rem;
-    position: relative;
-    padding-bottom: 56.25%;
-    height: 0;
-    overflow: hidden;
-  }
-
-  .video-embed iframe {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-  @media (max-width: 900px) {
-    .wrapper {
-      flex-direction: column;
-      padding: 1rem;
-    }
+    margin-top: 1.5rem;
   }
 </style>
 
-<div class="hero">
-  <h1>🚗 Win 1 Month of Premium Mobile Detailing</h1>
-  <p class="badge">5 Winners | $600 Value | Portland Metro</p>
+<div class="home-hero">
+  <h1>We Come Shine</h1>
+  <p>Portland’s trusted mobile detailing service — and we’re giving away 1 month FREE to 5 winners.</p>
+  <a href="/giveaway/" class="cta-btn">🎉 Enter the Giveaway</a>
 </div>
 
-<div class="wrapper">
+<div class="section">
+  <h2>Why People Choose Us</h2>
+  <ul>
+    <li>✅ We come to your home, work, or wherever you are</li>
+    <li>✅ Full interior & exterior service — not just a wash</li>
+    <li>✅ Steam clean, leather care, fabric protection & more</li>
+    <li>✅ Eco-friendly products & 100% satisfaction guarantee</li>
+  </ul>
 
-  <!-- LEFT SIDEBAR -->
-  <aside class="sidebar">
-    <h3>🔥 Ceramic Coating?</h3>
-    <p>Add a permanent shield to your paint. Ask us about <strong>ceramic protection upgrades</strong> at 50% OFF!</p>
-    <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=400&q=80" style="width:100%; border-radius: 8px;" alt="Ceramic Coating">
-  </aside>
+  <div class="badge-box">
+    💡 <strong>New Customer Special:</strong> Everyone who enters the giveaway gets 60% OFF their first detail!
+  </div>
 
-  <!-- MAIN SECTION -->
-  <section class="main">
-    <h2>What You Get</h2>
-    <ul>
-      <li>✅ Weekly interior + exterior detailing for 4 weeks</li>
-      <li>✅ Paint & ceramic protection</li>
-      <li>✅ Leather & fabric guard</li>
-      <li>✅ Steam cleaning + showroom shine</li>
-    </ul>
+  <p class="testimonial">“My car looked better than when I bought it. Super professional, came right to my driveway, and I didn’t lift a finger!”<br>— Sarah, NE Portland</p>
 
-    <div class="bonus-offer">
-      🎁 <strong>Bonus:</strong> All entries get <strong>60% OFF</strong> their first service — no strings attached.
-    </div>
-
-    <form action="https://formspree.io/f/YOUR_ID_HERE" method="POST">
-      <label>Full Name</label>
-      <input type="text" name="name" required>
-
-      <label>Email Address</label>
-      <input type="email" name="email" required>
-
-      <label>Phone Number</label>
-      <input type="tel" name="phone">
-
-      <label>Zip Code</label>
-      <input type="text" name="zip">
-
-      <label>How did you hear about us?</label>
-      <select name="referral">
-        <option value="instagram">Instagram</option>
-        <option value="facebook">Facebook</option>
-        <option value="flyer">Flyer</option>
-        <option value="friend">Friend</option>
-        <option value="partner">Local Business</option>
-        <option value="other">Other</option>
-      </select>
-
-      <button type="submit">🎉 Enter Giveaway Now</button>
-    </form>
-
-    <div class="video-embed">
-      <iframe src="https://www.youtube.com/embed/XBXxbxKXH5A" frameborder="0" allowfullscreen></iframe>
-    </div>
-
-    <p style="margin-top: 2rem; font-size: 0.9rem; color: #666;">
-      Winners announced <strong>July 15</strong>. One entry per person. Portland-area only.
-    </p>
-  </section>
-
-  <!-- RIGHT SIDEBAR -->
-  <aside class="sidebar">
-    <h3>💸 $50 Referral Bonus</h3>
-    <p>Refer a friend and get $50 when they book a full detail. Easy money!</p>
-    <img src="https://media.giphy.com/media/l41YtZOb9EUABnuqA/giphy.gif" alt="Referral" style="width:100%; border-radius: 8px;">
-  </aside>
-
+  <a href="/giveaway/" class="cta-btn">🚗 Claim Your Free Month</a>
 </div>
