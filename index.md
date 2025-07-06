@@ -1,4 +1,4 @@
----
+--
 layout: default
 title: We Come Shine
 ---
@@ -100,7 +100,7 @@ title: We Come Shine
 <div class="home-hero">
   <h1>We Come Shine</h1>
   <p>Portland’s trusted mobile detailing service — and we’re giving away 1 month FREE to 5 winners.</p>
-  <a href="/giveaway/" class="cta-btn">🎉 Enter the Giveaway</a>
+  <a href="./giveaway/" class="cta-btn">🎉 Enter the Giveaway</a>
 </div>
 
 <div class="section">
@@ -131,7 +131,7 @@ title: We Come Shine
     </div>
   </div>
 
-  <a href="/giveaway/" class="cta-btn">🚗 Claim Your Free Month</a>
+  <a href="./giveaway/" class="cta-btn">🚗 Claim Your Free Month</a>
 </div>
 
 <script>
