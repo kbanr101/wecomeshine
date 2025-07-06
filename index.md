@@ -133,8 +133,9 @@ title: We Come Shine
     </div>
   </div>
 
-  <a href="./giveaway/" class="cta-btn">🚗 Claim Your Free Month</a>
-</div>
+    <a href="./giveaway/" class="cta-btn" onclick="gtag('event', 'click', {'event_category':'Giveaway','event_label':'Homepage CTA'});">
+  🎉 Claim Your free Month
+</a>
 
 <script>
   let current = 0;
