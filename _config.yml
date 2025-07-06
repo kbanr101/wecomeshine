@@ -1,0 +1,12 @@
+title: We Come Shine
+description: Portland’s mobile auto detailing service
+url: "https://yourusername.github.io"
+baseurl: "/we-come-shine" # Update if using a custom subfolder
+
+theme: minima
+
+google_analytics: G-XXXXXXXXXX # Replace with your actual tracking ID
+
+# Optional SEO/social settings
+Founder: Rodrigue Ban 
+email: wecomeshine@gmail.com
