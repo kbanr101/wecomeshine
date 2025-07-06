@@ -10,6 +10,7 @@ permalink: /giveaway/
     background: #f8f9fa;
     color: #222;
     line-height: 1.6;
+    margin: 0;
   }
 
   .hero {
@@ -36,36 +37,36 @@ permalink: /giveaway/
     margin-bottom: 1rem;
   }
 
-  .content-wrapper {
+  .wrapper {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
     gap: 1rem;
-    padding: 2rem;
     max-width: 1200px;
     margin: auto;
+    padding: 2rem;
+    box-sizing: border-box;
+  }
+
+  .sidebar, .main {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    flex-grow: 1;
+    min-width: 280px;
+    box-sizing: border-box;
   }
 
   .sidebar {
-    flex: 1 1 200px;
+    flex-basis: 240px;
     background: #fff8e1;
-    padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 0 5px rgba(0,0,0,0.05);
-    min-width: 220px;
-    max-width: 280px;
   }
 
-  .main-section {
-    flex: 2 1 500px;
-    background: white;
-    padding: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
-  }
-
-  .main-section h2 {
-    color: #222;
+  .main {
+    flex-basis: 500px;
+    flex-grow: 2;
   }
 
   form input, form select, form button {
@@ -112,8 +113,8 @@ permalink: /giveaway/
     height: 100%;
   }
 
-  @media (max-width: 768px) {
-    .content-wrapper {
+  @media (max-width: 900px) {
+    .wrapper {
       flex-direction: column;
       padding: 1rem;
     }
@@ -125,7 +126,7 @@ permalink: /giveaway/
   <p class="badge">5 Winners | $600 Value | Portland Metro</p>
 </div>
 
-<div class="content-wrapper">
+<div class="wrapper">
 
   <!-- LEFT SIDEBAR -->
   <aside class="sidebar">
@@ -134,8 +135,8 @@ permalink: /giveaway/
     <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=400&q=80" style="width:100%; border-radius: 8px;" alt="Ceramic Coating">
   </aside>
 
-  <!-- MAIN GIVEAWAY FORM -->
-  <section class="main-section">
+  <!-- MAIN SECTION -->
+  <section class="main">
     <h2>What You Get</h2>
     <ul>
       <li>✅ Weekly interior + exterior detailing for 4 weeks</li>
