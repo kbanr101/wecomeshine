@@ -6,7 +6,7 @@ title: We Come Shine
 <style>
   .home-hero {
     background: url('https://images.unsplash.com/photo-1610913365113-287c37f75b9e?auto=format&fit=crop&w=1400&q=80') center center / cover no-repeat;
-    color: white;
+    color: black;
     padding: 5rem 2rem;
     text-align: center;
     text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
