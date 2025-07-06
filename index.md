@@ -100,8 +100,10 @@ title: We Come Shine
 <div class="home-hero">
   <h1>We Come Shine</h1>
   <p>Portland’s trusted mobile detailing service — and we’re giving away 1 month FREE to 5 winners.</p>
-  <a href="./giveaway/" class="cta-btn">🎉 Enter the Giveaway</a>
-</div>
+  <a href="./giveaway/" class="cta-btn" onclick="gtag('event', 'click', {'event_category':'Giveaway','event_label':'Homepage CTA'});">
+  🎉 Enter the Giveaway
+</a>
+
 
 <div class="section">
   <h2>Why People Choose Us</h2>
