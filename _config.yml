@@ -1,6 +1,21 @@
 header:
   logo: /logos.png
 
+  menu:
+    - title: Home
+      url: /
+    - title: Services
+      url: /services/
+    - title: Giveaway
+      url: /giveaway/
+    - title: Contact
+      url: /contact/
+
+  button:
+    text: Book a Shine
+    url: /book/
+
+
 footer:
   about: >
     We Come Shine is Portland's trusted mobile auto detailing service. 
