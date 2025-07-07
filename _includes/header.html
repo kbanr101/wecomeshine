@@ -6,10 +6,11 @@
   <img src="{{ site.header.logo | relative_url }}" alt="{{ site.title }}" />
 </a>
 
-<!-- Hamburger (mobile only) -->
 <button class="hamburger" onclick="document.body.classList.toggle('menu-open')">
-  &#9776;
+  <span class="hamburger-icon">&#9776;</span>
+  <span class="close-icon" style="display: none;">&times;</span>
 </button>
+
 
 <!-- Navigation -->
 <nav class="site-nav">
