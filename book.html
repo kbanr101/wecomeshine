@@ -6,71 +6,117 @@ permalink: /book/
 
 <style>
   .booking-container {
-    max-width: 1000px;
+    max-width: 1100px;
     margin: auto;
-    padding: 2rem;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    padding: 3rem 2rem;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    font-family: 'Segoe UI', sans-serif;
   }
 
   .mission {
-    background: #eaf6ff;
+    background: linear-gradient(to right, #e3f2fd, #ffffff);
     padding: 2rem;
-    border-left: 5px solid #1e90ff;
-    margin-bottom: 2rem;
-    border-radius: 8px;
+    border-left: 5px solid #1976d2;
+    border-radius: 12px;
+    margin-bottom: 2.5rem;
   }
 
-  .disclosures {
-    background: #fefae0;
-    padding: 1rem;
-    font-size: 0.9rem;
-    border-radius: 8px;
-    margin-top: 2rem;
+  .mission h2 {
+    margin-top: 0;
+    color: #1976d2;
   }
 
-  .pricing-table {
-    margin: 2rem 0;
+  .pricing-table h3, .pricing-table h4 {
+    color: #333;
+    margin-bottom: 1rem;
   }
 
   .pricing-table table {
     width: 100%;
     border-collapse: collapse;
+    margin-bottom: 1rem;
   }
 
   .pricing-table th, .pricing-table td {
     padding: 1rem;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #e0e0e0;
     text-align: left;
+    font-size: 0.95rem;
   }
 
-  .form-section {
-    margin-top: 2rem;
+  .pricing-table ul {
+    list-style: none;
+    padding: 0;
   }
 
-  label {
-    display: block;
-    margin-top: 1rem;
+  .pricing-table li {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+  }
+
+  .form-section form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+
+  .form-section form label {
     font-weight: 600;
+    margin-bottom: 0.25rem;
+    display: block;
   }
 
-  input, select, textarea {
+  .form-section input,
+  .form-section select,
+  .form-section textarea {
     width: 100%;
     padding: 0.75rem;
-    margin-top: 0.5rem;
+    border-radius: 8px;
     border: 1px solid #ccc;
-    border-radius: 6px;
+    font-size: 1rem;
+  }
+
+  .form-section textarea {
+    grid-column: span 2;
+  }
+
+  .form-section button {
+    grid-column: span 2;
+    padding: 1rem;
+    background-color: #1e88e5;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .form-section button:hover {
+    background-color: #1565c0;
   }
 
   .total-price {
+    grid-column: span 2;
+    background: #f1f8e9;
+    padding: 1rem;
     font-size: 1.2rem;
     font-weight: bold;
-    margin-top: 1rem;
-    background: #e6f2ff;
-    padding: 1rem;
-    border-radius: 6px;
     text-align: center;
+    border-radius: 10px;
+    color: #33691e;
+  }
+
+  .disclosures {
+    font-size: 0.85rem;
+    background: #fdfdfd;
+    padding: 1rem;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    margin-top: 2rem;
   }
 </style>
 
@@ -103,39 +149,49 @@ permalink: /book/
 
   <div class="form-section">
     <form id="bookingForm" action="https://formsubmit.co/wecomeshine@gmail.com" method="POST">
-      <label>Full Name</label>
-      <input type="text" name="name" required>
-
-      <label>Email</label>
-      <input type="email" name="email" required>
-
-      <label>Phone</label>
-      <input type="tel" name="phone" required>
-
-      <label>Service Address</label>
-      <input type="text" name="address" required>
-
-      <label>Select Package</label>
-      <select name="package" id="package-select">
-        <option value="99">Basic Clean - $99</option>
-        <option value="249">Full Detail - $249</option>
-        <option value="499">Ceramic Coating - $499</option>
-      </select>
-
-      <label>Preferred Date</label>
-      <input type="date" name="date" required>
-
-      <label>Preferred Time</label>
-      <select name="time">
-        <option>Morning (8am–11am)</option>
-        <option>Midday (11am–2pm)</option>
-        <option>Afternoon (2pm–5pm)</option>
-      </select>
-
+      <div>
+        <label>Full Name</label>
+        <input type="text" name="name" required>
+      </div>
+      <div>
+        <label>Email</label>
+        <input type="email" name="email" required>
+      </div>
+      <div>
+        <label>Phone</label>
+        <input type="tel" name="phone" required>
+      </div>
+      <div>
+        <label>Service Address</label>
+        <input type="text" name="address" required>
+      </div>
+      <div>
+        <label>Select Package</label>
+        <select name="package" id="package-select">
+          <option value="99">Basic Clean - $99</option>
+          <option value="249">Full Detail - $249</option>
+          <option value="499">Ceramic Coating - $499</option>
+        </select>
+      </div>
+      <div>
+        <label>Preferred Date</label>
+        <input type="date" name="date" required>
+      </div>
+      <div>
+        <label>Preferred Time</label>
+        <select name="time">
+          <option>Morning (8am–11am)</option>
+          <option>Midday (11am–2pm)</option>
+          <option>Afternoon (2pm–5pm)</option>
+        </select>
+      </div>
+      <div>
+        <label>Any Notes</label>
+        <textarea name="notes" rows="4" placeholder="Anything we should know?"></textarea>
+      </div>
       <div class="total-price">
         Total Price: $<span id="totalPrice">99</span>
       </div>
-
       <button type="submit">✅ Confirm Booking</button>
     </form>
   </div>
@@ -161,4 +217,3 @@ permalink: /book/
   packageSelect.addEventListener('change', calculateTotal);
   addonCheckboxes.forEach(cb => cb.addEventListener('change', calculateTotal));
 </script>
-
