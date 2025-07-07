@@ -1,4 +1,6 @@
 footer:
+footer:
+
   about: >
     We Come Shine is Portland's trusted mobile auto detailing service. 
     We bring premium interior and exterior car cleaning right to your driveway.
@@ -15,5 +17,5 @@ footer:
     facebook: "https://www.facebook.com/WeComeShine"
     instagram: "https://www.instagram.com/WeComeShine"
     pinterest: "https://www.pinterest.com/WeComeShine"
-  logo: /assets/images/logo.png
+  logo: /logos.png
   copyright: "© 2025 We Come Shine. All rights reserved."
