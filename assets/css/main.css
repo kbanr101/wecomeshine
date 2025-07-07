@@ -166,3 +166,55 @@
   }
 }
 
+/* === HAMBURGER MENU === */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #222;
+  cursor: pointer;
+}
+
+/* Show hamburger and hide menu on mobile */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    z-index: 1001;
+  }
+
+  .site-nav ul {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    width: 100%;
+    padding: 1rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+  }
+
+  body.menu-open .site-nav ul {
+    display: flex;
+  }
+
+  .site-nav li {
+    margin-bottom: 0.5rem;
+  }
+
+  .site-nav a {
+    padding: 0.5rem;
+    display: block;
+    border-radius: 6px;
+  }
+
+  .site-nav a:hover {
+    background: #f8f8f8;
+  }
+}
+
