@@ -166,7 +166,7 @@
   }
 }
 
-/* === HAMBURGER MENU === */
+/* === HAMBURGER BUTTON === */
 .hamburger {
   display: none;
   font-size: 2rem;
@@ -176,16 +176,18 @@
   cursor: pointer;
 }
 
-/* Show hamburger and hide menu on mobile */
+/* === MOBILE STYLES === */
 @media (max-width: 768px) {
+  /* Show hamburger on mobile */
   .hamburger {
     display: block;
     position: absolute;
-    top: 1rem;
+    top: 1.25rem;
     right: 1.5rem;
     z-index: 1001;
   }
 
+  /* Hide nav menu only — keep logo & button */
   .site-nav ul {
     display: none;
     flex-direction: column;
@@ -199,6 +201,7 @@
     z-index: 1000;
   }
 
+  /* Show menu when hamburger is clicked */
   body.menu-open .site-nav ul {
     display: flex;
   }
@@ -211,10 +214,30 @@
     padding: 0.5rem;
     display: block;
     border-radius: 6px;
+    font-size: 1.1rem;
+    color: #222;
+    font-weight: 500;
   }
 
   .site-nav a:hover {
     background: #f8f8f8;
   }
+
+  /* Make CTA full width if needed */
+  .header-cta {
+    width: 100%;
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .header-cta .btn-primary {
+    width: 100%;
+  }
+
+  /* Keep logo spacing clean */
+  .logo {
+    z-index: 1002;
+  }
 }
+
 
