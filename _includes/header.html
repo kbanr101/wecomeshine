@@ -1,0 +1,26 @@
+<header class="site-header">
+  <div class="container header-inner">
+    
+    <!-- Logo -->
+    <a href="{{ '/' | relative_url }}" class="logo">
+      <img src="{{ site.logo | relative_url }}" alt="{{ site.title }}" />
+    </a>
+
+    <!-- Navigation -->
+    <nav class="site-nav">
+      <ul>
+        {% for item in site.header.menu %}
+          <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+
+    <!-- CTA Button -->
+    <div class="header-cta">
+      <a href="{{ site.header.button.url | relative_url }}" class="btn-primary">
+        {{ site.header.button.text }}
+      </a>
+    </div>
+
+  </div>
+</header>
