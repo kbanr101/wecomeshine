@@ -9,7 +9,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-wrap: wrap;
 }
 
 .logo img {
@@ -20,6 +19,7 @@
   position: relative;
   width: 50%;
   left: 50%;
+  position: centered:
 }
 
 
