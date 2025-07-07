@@ -1,1 +1,164 @@
+---
+layout: default
+title: Book a Shine
+permalink: /book/
+---
+
+<style>
+  .booking-container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  }
+
+  .mission {
+    background: #eaf6ff;
+    padding: 2rem;
+    border-left: 5px solid #1e90ff;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+  }
+
+  .disclosures {
+    background: #fefae0;
+    padding: 1rem;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+  }
+
+  .pricing-table {
+    margin: 2rem 0;
+  }
+
+  .pricing-table table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .pricing-table th, .pricing-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+  }
+
+  .form-section {
+    margin-top: 2rem;
+  }
+
+  label {
+    display: block;
+    margin-top: 1rem;
+    font-weight: 600;
+  }
+
+  input, select, textarea {
+    width: 100%;
+    padding: 0.75rem;
+    margin-top: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+
+  .total-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    background: #e6f2ff;
+    padding: 1rem;
+    border-radius: 6px;
+    text-align: center;
+  }
+</style>
+
+<div class="booking-container">
+  <div class="mission">
+    <h2>About We Come Shine</h2>
+    <p>We Come Shine is Portland’s trusted mobile detailing service. Our mission is to make car care convenient, affordable, and premium — delivered right to your driveway. Our vision is to lead the mobile detailing revolution while empowering local communities with eco-friendly, high-value auto care.</p>
+  </div>
+
+  <div class="pricing-table">
+    <h3>Packages & Pricing</h3>
+    <table>
+      <thead>
+        <tr><th>Package</th><th>Description</th><th>Price</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Basic Clean</td><td>Exterior wash + quick vacuum</td><td>$99</td></tr>
+        <tr><td>Full Detail</td><td>Interior + Exterior deep clean</td><td>$249</td></tr>
+        <tr><td>Ceramic Coating</td><td>Long-term paint protection</td><td>$499</td></tr>
+      </tbody>
+    </table>
+
+    <h4>Add-ons</h4>
+    <ul>
+      <li><input type="checkbox" class="addon" data-price="49"> Pet Hair Removal ($49)</li>
+      <li><input type="checkbox" class="addon" data-price="79"> Engine Bay Detail ($79)</li>
+      <li><input type="checkbox" class="addon" data-price="99"> Odor Neutralizer & Deep Steam ($99)</li>
+    </ul>
+  </div>
+
+  <div class="form-section">
+    <form id="bookingForm" action="https://formsubmit.co/wecomeshine@gmail.com" method="POST">
+      <label>Full Name</label>
+      <input type="text" name="name" required>
+
+      <label>Email</label>
+      <input type="email" name="email" required>
+
+      <label>Phone</label>
+      <input type="tel" name="phone" required>
+
+      <label>Service Address</label>
+      <input type="text" name="address" required>
+
+      <label>Select Package</label>
+      <select name="package" id="package-select">
+        <option value="99">Basic Clean - $99</option>
+        <option value="249">Full Detail - $249</option>
+        <option value="499">Ceramic Coating - $499</option>
+      </select>
+
+      <label>Preferred Date</label>
+      <input type="date" name="date" required>
+
+      <label>Preferred Time</label>
+      <select name="time">
+        <option>Morning (8am–11am)</option>
+        <option>Midday (11am–2pm)</option>
+        <option>Afternoon (2pm–5pm)</option>
+      </select>
+
+      <div class="total-price">
+        Total Price: $<span id="totalPrice">99</span>
+      </div>
+
+      <button type="submit">✅ Confirm Booking</button>
+    </form>
+  </div>
+
+  <div class="disclosures">
+    <p><strong>Legal Notice:</strong> By booking, you agree to our <a href="/terms/">Terms of Service</a>, <a href="/privacy/">Privacy Policy</a>, and <a href="/affiliate-disclosure/">Affiliate Disclosure</a>. You may receive promotional emails related to car services.</p>
+  </div>
+</div>
+
+<script>
+  const packageSelect = document.getElementById('package-select');
+  const addonCheckboxes = document.querySelectorAll('.addon');
+  const totalPriceEl = document.getElementById('totalPrice');
+
+  function calculateTotal() {
+    let total = parseFloat(packageSelect.value);
+    addonCheckboxes.forEach(cb => {
+      if (cb.checked) total += parseFloat(cb.getAttribute('data-price'));
+    });
+    totalPriceEl.textContent = total.toFixed(2);
+  }
+
+  packageSelect.addEventListener('change', calculateTotal);
+  addonCheckboxes.forEach(cb => cb.addEventListener('change', calculateTotal));
+</script>
 
