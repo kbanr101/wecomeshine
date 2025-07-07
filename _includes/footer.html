@@ -16,6 +16,15 @@
       </ul>
     </div>
 
+    <div class="footer-menu">
+      <h4>Other Links</h4>
+      <ul>
+        {% for item in site.footer.menu %}
+          <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
+
     <div class="footer-social">
       <h4>Follow Us</h4>
 
