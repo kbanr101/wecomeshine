@@ -18,6 +18,9 @@
 
 .site-nav {
   position: relative;
+  width: 100%;
+  left: 0;
+
 }
 
 
