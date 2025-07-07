@@ -17,7 +17,9 @@
 }
 
 .site-nav {
-  flex: 1;
+  position: relative;
+  width: 50%;
+  left: 50%;
 }
 
 
