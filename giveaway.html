@@ -161,37 +161,43 @@ permalink: /giveaway/
     <br>
 
 
-    <form action="https://formsubmit.co/wecomeshine@gmail.com" method="POST" />
-      <label>Full Name</label>
-      <input type="text" name="name" required>
+    <form action="https://formsubmit.co/wecomeshine@gmail.com" method="POST">
+  <!-- Hidden Settings -->
+  <input type="hidden" name="_next" value="https://yourdomain.com/thank-you.html">
+  <input type="hidden" name="_captcha" value="false">
 
-      <label>Email Address</label>
-      <input type="email" name="email" required>
+  <!-- Form Fields -->
+  <label>Full Name</label>
+  <input type="text" name="name" required>
 
-      <label>Phone Number</label>
-      <input type="tel" name="phone">
+  <label>Email Address</label>
+  <input type="email" name="email" required>
 
-      <label>Zip Code</label>
-      <input type="text" name="zip">
+  <label>Phone Number</label>
+  <input type="tel" name="phone">
 
-      <label>How did you hear about us?</label>
-      <select name="referral">
-        <option value="instagram">Instagram</option>
-        <option value="facebook">Facebook</option>
-        <option value="flyer">Flyer</option>
-        <option value="friend">Friend</option>
-        <option value="partner">Local Business</option>
-        <option value="other">Other</option>
-      </select>
-      <label>Referred By:</label>
+  <label>Zip Code</label>
+  <input type="text" name="zip">
+
+  <label>How did you hear about us?</label>
+  <select name="referral">
+    <option value="instagram">Instagram</option>
+    <option value="facebook">Facebook</option>
+    <option value="flyer">Flyer</option>
+    <option value="friend">Friend</option>
+    <option value="partner">Local Business</option>
+    <option value="other">Other</option>
+  </select>
+
+  <label>Referred By:</label>
   <input 
     type="email" 
     name="referrer_email" 
     placeholder="If you were referred by someone, enter their email here">
 
+  <button type="submit">🎉 Enter Giveaway Now</button>
+</form>
 
-      <button type="submit">🎉 Enter Giveaway Now</button>
-    </form>
 
     <div class="video-embed">
       <iframe src="https://www.youtube.com/embed/XBXxbxKXH5A" frameborder="0" allowfullscreen></iframe>
