@@ -120,7 +120,7 @@ title: We Come Shine
 
   <div class="testimonial-carousel">
     <div class="testimonial-slide active">
-      <p>“My car looked better than when I bought it. Super professional, came right to my driveway, and I didn’t lift a finger!”</p>
+      <p>“My car looked better than when I bought it. Super professional, came right to my driveway.”</p>
       <span>— Sarah, NE Portland</span>
     </div>
     <div class="testimonial-slide">
