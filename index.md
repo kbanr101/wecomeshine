@@ -115,7 +115,7 @@ title: We Come Shine
   </ul>
 
   <div class="badge-box">
-    💡 <strong>New Customer Special:</strong> Everyone who enters the giveaway gets 60% OFF their first detail!
+    💡 <strong>New Customer Special:</strong> Everyone who enters the giveaway gets 10% OFF their first detail!
   </div>
 
   <div class="testimonial-carousel">
