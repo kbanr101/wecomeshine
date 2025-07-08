@@ -329,7 +329,7 @@ body {
   .section h2 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: #111;
+    color: #222;
   }
 
   .section ul {
@@ -337,7 +337,7 @@ body {
     display: inline-block;
     margin: auto;
     font-size: 1.2rem;       /* bigger font */
-    color: #111;             /* darker text */
+    color: #222;             /* darker text */
     line-height: 1.6;       /* more readable space */
   }
 
