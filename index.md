@@ -132,6 +132,8 @@ title: We Come Shine
       <span>— Lily, Gresham</span>
     </div>
   </div>
+  <br>
+  <br>
 
     <a href="./giveaway/" class="cta-btn" onclick="gtag('event', 'click', {'event_category':'Giveaway','event_label':'Homepage CTA'});">
   🎉 Claim Your free Month
