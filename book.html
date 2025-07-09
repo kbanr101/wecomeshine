@@ -116,6 +116,18 @@ permalink: /book/
     border-radius: 8px;
     margin-top: 2rem;
   }
+
+  .info-bubble {
+    display: none;
+    position: absolute;
+    background: #fff3cd;
+    padding: 0.75rem;
+    border: 1px solid #ffeeba;
+    border-radius: 6px;
+    margin-top: 0.25rem;
+    font-size: 0.85rem;
+    z-index: 100;
+  }
 </style>
 
 <div class="booking-container">
@@ -126,16 +138,18 @@ permalink: /book/
 
   <div class="pricing-table">
     <h3>Packages & Pricing</h3>
-    <table>
-      <thead>
-        <tr><th>Package</th><th>Description</th><th>Price</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Basic Clean</td><td>Exterior wash + quick vacuum</td><td>$99</td></tr>
-        <tr><td>Full Detail</td><td>Interior + Exterior deep clean</td><td>$249</td></tr>
-        <tr><td>Ceramic Coating</td><td>Long-term paint protection</td><td>$499</td></tr>
-      </tbody>
-    </table>
+    <label>
+      <input type="radio" name="package" class="main-package" value="99" checked>
+      Basic Clean - $99
+    </label>
+    <label>
+      <input type="radio" name="package" class="main-package" value="249">
+      Full Detail - $249
+    </label>
+    <label>
+      <input type="radio" name="package" class="main-package" value="499">
+      Ceramic Coating - $499
+    </label>
 
     <h4>Add-ons</h4>
     <ul>
@@ -143,6 +157,16 @@ permalink: /book/
       <li><label><input type="checkbox" class="addon" data-price="79"> Engine Bay Detail ($79)</label></li>
       <li><label><input type="checkbox" class="addon" data-price="99"> Odor Neutralizer & Deep Steam ($99)</label></li>
     </ul>
+
+    <h4>Service Method</h4>
+    <label style="position: relative">
+      <input type="radio" name="method" class="method-option" value="50" checked> We Come to You (+$50)
+      <div class="info-bubble">We'll come to your location. A $50 mobile fee applies.</div>
+    </label>
+    <label style="position: relative">
+      <input type="radio" name="method" class="method-option" value="0"> You Come to Us ($0)
+      <div class="info-bubble">Bring your vehicle to our designated cleaning spot. No extra fee.</div>
+    </label>
   </div>
 
   <div class="form-section">
@@ -164,14 +188,6 @@ permalink: /book/
         <input type="text" name="address" required>
       </div>
       <div>
-        <label>Select Package</label>
-        <select name="package" id="package-select">
-          <option value="99">Basic Clean - $99</option>
-          <option value="249">Full Detail - $249</option>
-          <option value="499">Ceramic Coating - $499</option>
-        </select>
-      </div>
-      <div>
         <label>Preferred Date</label>
         <input type="date" name="date" required>
       </div>
@@ -188,7 +204,7 @@ permalink: /book/
         <textarea name="notes" rows="4" placeholder="Anything we should know?"></textarea>
       </div>
       <div class="total-price">
-        Total Price: $<span id="totalPrice">99</span>
+        Total Price: $<span id="totalPrice">149</span>
       </div>
       <button type="submit">✅ Confirm Booking</button>
     </form>
@@ -200,17 +216,37 @@ permalink: /book/
 </div>
 
 <script>
-  const packageSelect = document.getElementById('package-select');
-  const addonCheckboxes = document.querySelectorAll('.addon');
   const totalPriceEl = document.getElementById('totalPrice');
+  const packageRadios = document.querySelectorAll('.main-package');
+  const addonCheckboxes = document.querySelectorAll('.addon');
+  const methodRadios = document.querySelectorAll('.method-option');
+  const infoBubbles = document.querySelectorAll('.info-bubble');
 
   function calculateTotal() {
-    let total = parseFloat(packageSelect.value);
+    let packagePrice = [...packageRadios].find(r => r.checked)?.value || 0;
+    let methodPrice = [...methodRadios].find(r => r.checked)?.value || 0;
+    let addons = 0;
     addonCheckboxes.forEach(cb => {
-      if (cb.checked) total += parseFloat(cb.getAttribute('data-price'));
+      if (cb.checked) addons += parseFloat(cb.getAttribute('data-price'));
     });
+    const total = parseFloat(packagePrice) + parseFloat(methodPrice) + addons;
     totalPriceEl.textContent = total.toFixed(2);
   }
 
-  packageSelect.addEventListener('change', calculateTotal);
-  addonCheckboxes.forEach(cb => cb.addEventListen
+  packageRadios.forEach(r => r.addEventListener('change', calculateTotal));
+  addonCheckboxes.forEach(cb => cb.addEventListener('change', calculateTotal));
+  methodRadios.forEach(r => r.addEventListener('change', calculateTotal));
+
+  document.querySelectorAll('label').forEach(label => {
+    label.addEventListener('mouseenter', () => {
+      const bubble = label.querySelector('.info-bubble');
+      if (bubble) bubble.style.display = 'block';
+    });
+    label.addEventListener('mouseleave', () => {
+      const bubble = label.querySelector('.info-bubble');
+      if (bubble) bubble.style.display = 'none';
+    });
+  });
+
+  calculateTotal();
+</script>
